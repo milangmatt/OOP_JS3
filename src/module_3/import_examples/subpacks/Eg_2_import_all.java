@@ -14,3 +14,4 @@ public class Eg_2_import_all {
         //this is because only one instance variable and a method is the only public specified 
     }
 }
+// The Importin class comes from mainpack package that is not even a member of subpacks package

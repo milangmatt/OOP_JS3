@@ -1,10 +1,8 @@
-package module_3.import_examples.subpacks;
+package module_3.M3_p2_import_examples.subpacks;
 
-import module_3.import_examples.mainpack.*;
+import module_3.M3_p2_import_examples.mainpack.ImportIn;
 
-// Importing all classes from a subpackage using the "*" wildcard character
-
-public class Eg_2_import_all {
+public class Eg_3_import_specific {
     public static void main(String[] args) {
         ImportIn impin = new ImportIn();
         impin.msg();

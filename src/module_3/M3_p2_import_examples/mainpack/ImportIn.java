@@ -1,4 +1,4 @@
-package module_3.import_examples.mainpack;
+package module_3.M3_p2_import_examples.mainpack;
 
 public class ImportIn {
     int a = 100;

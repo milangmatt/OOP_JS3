@@ -1,0 +1,2 @@
+Hello, this file is created with FileWriter
+And this can be read with FileReader

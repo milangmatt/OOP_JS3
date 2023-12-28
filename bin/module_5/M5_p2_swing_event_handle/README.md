@@ -113,5 +113,5 @@ This is a simple example of how to setup Event Handling using Swing package.
 ## Output
 
 The Output of the program may look like this
----
+<br>
 ![Alt text](image.png)

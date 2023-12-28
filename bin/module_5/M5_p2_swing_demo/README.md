@@ -75,7 +75,7 @@ This line schedules a job for the event-dispatching thread, which is responsible
 
 ## Conclusion
 
-This is a simple example of how to use the Swing package to create a JFrame and a JLabel. By following the steps in this
+This is a simple example of how to use the Swing package to create a JFrame and a JLabel.
 
 ## Output
 

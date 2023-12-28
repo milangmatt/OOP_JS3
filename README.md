@@ -1,10 +1,13 @@
-# Object Oriented Programming with Java
-## CST 205
 <h1 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hola+Peeps!😁; Hope+you+are+doing+well...&left=true&size=30">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hola+Peeps!😁; Hope+you+are+doing+well...&center=true&size=30">
   </a>
 </h1>
+___
+
+# Object Oriented Programming with Java
+## CST 205
+
 
 
 

@@ -43,6 +43,7 @@ JLabel jlab = new JLabel("Hello welcome to a simple swing program");
 ```
 
 This line creates a new JLabel object, which is used to display text on the frame. The text of the label is set to "Hello welcome to a simple swing program".
+***JLabel is the simplest*** of all components of Swing as it has ***no interaction with the user*** and is ***passive***
 
 ### 6. Add the JLabel to the JFrame
 

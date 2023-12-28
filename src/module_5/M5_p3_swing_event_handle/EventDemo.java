@@ -1,4 +1,4 @@
-package module_5.M5_p2_swing_event_handle;
+package module_5.M5_p3_swing_event_handle;
 // this is a program in Swing that is used to demonstrate the event handling mechanism of swing using two buttons and a label
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&random=false&width=435&lines=Hola+People!%F0%9F%98%81;Hope+you+are+doing+well...%F0%9F%98%8A)](https://github.com/milangmatt)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&random=false&width=435&lines=Hola+Buddy!%F0%9F%98%81;Hope+you+are+doing+well...%F0%9F%98%8A)](https://github.com/milangmatt)
 
 
 # Object Oriented Programming with Java

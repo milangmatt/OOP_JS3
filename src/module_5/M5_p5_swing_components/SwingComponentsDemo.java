@@ -3,8 +3,7 @@ package module_5.M5_p5_swing_components;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 public class SwingComponentsDemo {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {

@@ -80,4 +80,5 @@ This is a simple example of how to use the Swing package to create a JFrame and 
 ## Output
 
 The Output of the program may look like this
+<br>
 ![Alt text](image.png)

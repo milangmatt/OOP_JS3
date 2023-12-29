@@ -5,13 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.event.*;
 public class SwingComponentsDemo {
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new SwingComponentsDemo().createAndShowGUI();
-        });
-    }
-
-    private void createAndShowGUI() {
+   
+    SwingComponentsDemo() {
         JFrame frame = new JFrame("Swing Components Demo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -194,4 +189,13 @@ public class SwingComponentsDemo {
         panel.add(comboBox);
         return panel;
     }
+
+     public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable()  {
+            public void run(){
+                new SwingComponentsDemo();
+            }
+        });
+    }
+
 }

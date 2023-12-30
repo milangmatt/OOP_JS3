@@ -8,7 +8,7 @@ public class Serializer {
             // Creating the object
             Student s1 = new Student(211, "Ravi");
             // Creating stream and writing the object
-            FileOutputStream fout = new FileOutputStream("f.txt");
+            FileOutputStream fout = new FileOutputStream("Assets\\f.txt");
             //the FileOutputStream is created to store the ObjectOutput
             ObjectOutputStream out = new ObjectOutputStream(fout);
             //this is used to serialize the newly created object and store it to f.txt

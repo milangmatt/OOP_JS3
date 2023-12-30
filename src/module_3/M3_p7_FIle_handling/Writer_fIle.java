@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Writer_fIle {
     public static void main(String[] args) {
         // Specify the file path
-        String filePath = "outputWriter.txt";
+        String filePath = "Assets\\outputWriter.txt";
          //the file will be created in the src folder
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             // Write lines to the file

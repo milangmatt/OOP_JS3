@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Reader_file {
     public static void main(String[] args) {
         // Specify the file path
-        String filePath = "outputWriter.txt";
+        String filePath = "Assets\\outputWriter.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             // Read lines from the file

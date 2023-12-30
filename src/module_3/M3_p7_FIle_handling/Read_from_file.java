@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Read_from_file {
     public static void main(String[] args) {
         // Specify the file path
-        String filePath = "output.txt";
+        String filePath = "Assets\\output.txt";
         try (FileInputStream fis = new FileInputStream(filePath)) {
             // Read bytes from the file
             int data;

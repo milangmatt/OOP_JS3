@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Write_to_file {
     public static void main(String[] args) {
         // Specify the file path
-        String filePath = "output.txt";
+        String filePath = "Assets\\output.txt";
         //the file will be created in the src folder
         try (FileOutputStream fout = new FileOutputStream(filePath)) {
             // Convert string data to bytes and write to the file

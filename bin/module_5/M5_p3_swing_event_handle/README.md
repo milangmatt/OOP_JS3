@@ -114,4 +114,4 @@ This is a simple example of how to setup Event Handling using Swing package.
 
 The Output of the program may look like this
 <br>
-![Alt text](image.png)
+![Alt text](../../../Assets/event_out.png)

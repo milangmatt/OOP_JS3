@@ -4,6 +4,17 @@ This is a program written to demonstrate different components in Swing library.
 
 ## Components used
 
+- [`JFrame`]( #jframe-creation-and-setting-properties )
+- [`JLabel`]( #1-label-panel )
+- [`JButton`]( #2-button-panel )
+- [`JToggleButton`]( #3-toggle-button-panel )
+- [`JCheckBox`]( #4-check-box-panel )
+- [`JRadioButton`]( #5-radio-button-panel )
+- [`JTextField`]( #6-text-field-panel )
+- [`JList`]( #7-list-panel )
+- [`JComboBox`]( #8-combobox-panel )
+
+
 ## Step by Step explanation
 
 ### Importing Packages
@@ -282,3 +293,144 @@ private JPanel createRadioButtonPanel(String panelName) {
     return panel;
 }
 ```
+
+Here we have created a radio panel with three options and they are added with an `ItemListener` which implements the `itemStateChanged()` method by calling `isSelected()` method on every button to check if it is selected and processing the event.
+
+```java
+ItemListener radioButtonListener = new ItemListener() {
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+        if (radioButton1.isSelected()) {
+            label.setText("Event: Option 1 selected");
+        } else if (radioButton2.isSelected()) {
+            label.setText("Event: Option 2 selected");
+        } else if (radioButton3.isSelected()) {
+            label.setText("Event: Option 3 selected");
+        }
+    }
+};
+```
+
+This code adds an `ItemListener` to each of the three radio buttons, which means that when one of them is clicked or deselected.
+
+---
+
+### 6. Text Field Panel
+
+There is one `JTextField` that is initially empty and send an `ActionEvent` when ENTER key is pressed. The text field has the listener which adds the entered value to a Label.
+
+```java
+    private JPanel createTextFieldPanel(String panelName) {
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel("Event: ");
+        JTextField textField = new JTextField(10);
+        textField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Event: Text Entered - " + textField.getText());
+            }
+        });
+        panel.add(label);
+        panel.add(textField);
+        return panel;
+    }
+```
+Note that the `actionPerformed` method is called when the user presses enter in the field. The method is implemented in an anonymous class.
+```java
+textField.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        label.setText("Event: Text Entered - " + textField.getText());
+    }
+});
+```
+
+`JTextComponent` is the superclass of all Swing text components, such as `JTextField`, `JTextArea`.
+
+---
+### 7. List Panel
+
+`JList`: a component that displays a list of items from which the user can select an item. The selection in a `JList`.
+The constructor for `JList` takes an array of objects that will be displayed in the list.
+The `getSelectedItem()` method returns the currently selected object's value.
+```java
+private JPanel createListPanel(String panelName) {
+    JPanel panel = new JPanel();
+    JLabel label = new JLabel("Event: ");
+    String[] data = {"Item 1", "Item 2", "Item 3"};
+    JList<String> list = new JList<>(data);
+    list.addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            label.setText("Event: Item Selected - " + list.getSelectedValue());
+        }
+    });
+    panel.add(label);
+    panel.add(new JScrollPane(list));
+    return panel;
+}
+```
+Note that `valueChanged(...)` is called whenever there is a change to the selection model ( e.g., if you click on another item in the list ).
+The event handling is done using a `ListSelectionListener`.
+
+```java
+list.addListSelectionListener(new ListSelectionListener() {
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        label.setText("Event: Item Selected - " + list.getSelectedValue());
+    }
+});
+```
+Note that if multiple items are selected (via `Ctrl` or `Shift`), only one item can be reported as being selected at any given time.
+
+
+---
+### 8. ComboBox Panel
+`JComboBox` displays a list of items from which the user can select an item.
+The constructor for `JComboBox` takes an array of objects that will be displayed in the box.
+The `getSelectedValue()` method returns the currently selected object.
+
+```java
+private JPanel createComboBoxPanel(String panelName) {
+    JPanel panel = new JPanel();
+    JLabel label = new JLabel("Event: ");
+    String[] data = {"Option 1", "Option 2", "Option 3"};
+    JComboBox<String> comboBox = new JComboBox<>(data);
+    comboBox.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            label.setText("Event: Option Selected - " + comboBox.getSelectedItem());
+        }
+    });
+    panel.add(label);
+    panel.add(comboBox);
+    return panel;
+}
+```
+Note that this example uses an `ActionListener`, not a `ListSelectionListener`, because `JComboBox` does not support multiple selection. And accepts an `ActionEvent`.
+```java
+comboBox.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        label.setText("Event: Option Selected - " + comboBox.getSelectedItem());
+    }
+});
+```
+Note: The `actionPerformed()` method is called when the user selects an option or presses enter while the combobox has focus.
+
+
+## Main method
+The main method is written so as to run the app in an event dispatching thread.
+```java
+public static void main(String[] args) {
+    SwingUtilities.invokeLater(new Runnable()  {
+        public void run(){
+            new SwingComponentsDemo();
+        }
+    });
+}
+```
+This ensures that all Swing components are created and executed on the Event Dispatch Thread, avoiding any concurrency issues.
+
+# Conclusion
+This program was to provide an overview on components of swing package in java.

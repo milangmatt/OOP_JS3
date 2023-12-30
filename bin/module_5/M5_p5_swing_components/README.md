@@ -432,5 +432,9 @@ public static void main(String[] args) {
 ```
 This ensures that all Swing components are created and executed on the Event Dispatch Thread, avoiding any concurrency issues.
 
+# Output
+
+![Alt text](../../../Assets/component_out.png)
+
 # Conclusion
 This program was to provide an overview on components of swing package in java.

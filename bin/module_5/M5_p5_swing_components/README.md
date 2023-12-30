@@ -1,19 +1,18 @@
 # Swing Components Demo
 
-This is a program written to demonstrate different components in Swing package. 
+This is a program written to demonstrate different components in Swing package.
 
 ## Components used
 
-- [`JFrame`]( #jframe-creation-and-setting-properties )
-- [`JLabel`]( #1-label-panel )
-- [`JButton`]( #2-button-panel )
-- [`JToggleButton`]( #3-toggle-button-panel )
-- [`JCheckBox`]( #4-check-box-panel )
-- [`JRadioButton`]( #5-radio-button-panel )
-- [`JTextField`]( #6-text-field-panel )
-- [`JList`]( #7-list-panel )
-- [`JComboBox`]( #8-combobox-panel )
-
+- [`JFrame`](#jframe-creation-and-setting-properties)
+- [`JLabel`](#1-label-panel)
+- [`JButton`](#2-button-panel)
+- [`JToggleButton`](#3-toggle-button-panel)
+- [`JCheckBox`](#4-check-box-panel)
+- [`JRadioButton`](#5-radio-button-panel)
+- [`JTextField`](#6-text-field-panel)
+- [`JList`](#7-list-panel)
+- [`JComboBox`](#8-combobox-panel)
 
 ## Step by Step explanation
 
@@ -66,7 +65,7 @@ JPanel radioButtonPanel = createRadioButtonPanel("Radio Button Panel");
 JPanel textFieldPanel = createTextFieldPanel("Text Field Panel");
 //panel for JList
 JPanel listPanel = createListPanel("List Panel");
-//panle for JComboBox
+//panel for JComboBox
 JPanel comboBoxPanel = createComboBoxPanel("Combo Box Panel");
 ```
 
@@ -110,7 +109,8 @@ frame.setVisible(true);
 ```
 
 Finally, the visibility of the `JFrame` is set to true, making it visible on the screen.
-<hr>
+
+---
 
 ## Methods for Creating Panels
 
@@ -119,6 +119,7 @@ All these methods return an instance of `JPanel`. Each method creates a specific
 ### 1. Label Panel
 
 Creates a `JLabel` in the center of the panel. The text "This is a label" appears next to the label.
+
 ```java
 private JPanel createLabelPanel(String panelName) {
     JPanel panel = new JPanel();
@@ -127,6 +128,7 @@ private JPanel createLabelPanel(String panelName) {
     return panel;
 }
 ```
+
 ---
 
 ### 2. Button Panel
@@ -165,11 +167,14 @@ The `actionPerformed()` method inside the anonymous class is called when the but
 Adding multiple listeners to one component will cause each listener to be called when the event occurs.
 
 ---
+
 ### 3. Toggle Button Panel
+
 A toggle button can be created using `JToggleButton`. When clicked, it toggles between its selected and unselected states.
 
 `JToggleButton` extends `JButton`, but it can be toggled on and off by clicking on it.
 When a toggle button is clicked, it becomes selected (true), otherwise it's deselected (false).
+
 ```java
 private JPanel createToggleButtonPanel(String panelName) {
     JPanel panel = new JPanel();
@@ -190,7 +195,9 @@ private JPanel createToggleButtonPanel(String panelName) {
     return panel;
 }
 ```
+
 The `stateChanged` method of an `ItemListener` is invoked only when there is a change in the state of the item.
+
 ```java
 toggleButton.addItemListener(new ItemListener() {
     @Override
@@ -203,6 +210,7 @@ toggleButton.addItemListener(new ItemListener() {
     }
 });
 ```
+
 The code above uses an anonymous inner class for the `itemStateChanged()` method.
 This approach allows you to handle events without having to define a separate class.
 However, using an anonymous inner class has some limitations. For example, you cannot access **local variables** from outside of the scope where they were declared.
@@ -259,7 +267,9 @@ In this example, we have created a checkbox panel with three options. When any o
 ---
 
 ### 5. Radio Button panel
+
 The logic is similar to checkboxes but we use radio buttons instead. We also need to make sure that only one button can be selected at a time, for this every button is added to a button group, an instance of `ButtonGroup` such that the button in a group are mutually exclusive.
+
 ```java
 private JPanel createRadioButtonPanel(String panelName) {
     JPanel panel = new JPanel();
@@ -335,7 +345,9 @@ There is one `JTextField` that is initially empty and send an `ActionEvent` when
         return panel;
     }
 ```
+
 Note that the `actionPerformed` method is called when the user presses enter in the field. The method is implemented in an anonymous class.
+
 ```java
 textField.addActionListener(new ActionListener() {
     @Override
@@ -348,11 +360,13 @@ textField.addActionListener(new ActionListener() {
 `JTextComponent` is the superclass of all Swing text components, such as `JTextField`, `JTextArea`.
 
 ---
+
 ### 7. List Panel
 
 `JList`: a component that displays a list of items from which the user can select an item. The selection in a `JList`.
 The constructor for `JList` takes an array of objects that will be displayed in the list.
 The `getSelectedItem()` method returns the currently selected object's value.
+
 ```java
 private JPanel createListPanel(String panelName) {
     JPanel panel = new JPanel();
@@ -370,6 +384,7 @@ private JPanel createListPanel(String panelName) {
     return panel;
 }
 ```
+
 Note that `valueChanged(...)` is called whenever there is a change to the selection model ( e.g., if you click on another item in the list ).
 The event handling is done using a `ListSelectionListener`.
 
@@ -381,11 +396,13 @@ list.addListSelectionListener(new ListSelectionListener() {
     }
 });
 ```
+
 Note that if multiple items are selected (via `Ctrl` or `Shift`), only one item can be reported as being selected at any given time.
 
-
 ---
+
 ### 8. ComboBox Panel
+
 `JComboBox` displays a list of items from which the user can select an item.
 The constructor for `JComboBox` takes an array of objects that will be displayed in the box.
 The `getSelectedValue()` method returns the currently selected object.
@@ -407,7 +424,9 @@ private JPanel createComboBoxPanel(String panelName) {
     return panel;
 }
 ```
+
 Note that this example uses an `ActionListener`, not a `ListSelectionListener`, because `JComboBox` does not support multiple selection. And accepts an `ActionEvent`.
+
 ```java
 comboBox.addActionListener(new ActionListener() {
     @Override
@@ -416,11 +435,13 @@ comboBox.addActionListener(new ActionListener() {
     }
 });
 ```
+
 Note: The `actionPerformed()` method is called when the user selects an option or presses enter while the combobox has focus.
 
-
 ## Main method
+
 The main method is written so as to run the app in an event dispatching thread.
+
 ```java
 public static void main(String[] args) {
     SwingUtilities.invokeLater(new Runnable()  {
@@ -430,6 +451,7 @@ public static void main(String[] args) {
     });
 }
 ```
+
 This ensures that all Swing components are created and executed on the Event Dispatch Thread, avoiding any concurrency issues.
 
 # Output
@@ -437,4 +459,5 @@ This ensures that all Swing components are created and executed on the Event Dis
 ![Alt text](../../../Assets/component_out.png)
 
 # Conclusion
+
 This program was to provide an overview on components of swing package in java.

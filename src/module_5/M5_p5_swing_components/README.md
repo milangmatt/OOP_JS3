@@ -1,6 +1,6 @@
 # Swing Components Demo
 
-This is a program written to demonstrate different components in Swing library. 
+This is a program written to demonstrate different components in Swing package. 
 
 ## Components used
 
@@ -27,7 +27,7 @@ import javax.swing.event.*;
 ```
 
 Every required package is imported<br>
-The swing and awt packages are imported for the components and their event subclasses has bee imported to implement there events and perform necessary action.
+The `swing` and `awt` packages are imported for the components and their `event` subclasses has been imported to implement there events and perform necessary action.
 
 ### Creating the constructor
 

@@ -18,4 +18,4 @@ You can find the files ready to download from this [Google_Drive](https://drive.
 
 
 
-#### Pending modules will be added shortly
+#### Pending modules and lab programs will be added shortly

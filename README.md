@@ -19,5 +19,5 @@ You can find the files ready to download from this [Google_Drive](https://drive.
 - [Module 5](https://github.com/milangmatt/OOP_JS3/tree/main/src/module_5)
 
 
-
+#### Module 2 notes has not been attached with programs
 #### Pending modules will be added shortly

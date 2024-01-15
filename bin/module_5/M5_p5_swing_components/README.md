@@ -94,13 +94,13 @@ frame.add(comboBoxPanel);
 
 Each panel is added to the `contentPane` of the `JFrame`, so they appear side by side below each other.
 
-### Setting preferred size for all panels
+### Setting preferred size for frame
 
 ```java
 frame.setSize(500, 400);
 ```
 
-The `preferredSize` property of each panel is set to `(500, 400)`.
+The `preferredSize` property of frame is set to `(500, 400)`.
 
 ### Setting the Frame to be visible
 

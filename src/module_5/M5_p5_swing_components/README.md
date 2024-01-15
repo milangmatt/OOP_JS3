@@ -366,7 +366,7 @@ textField.addActionListener(new ActionListener() {
 
 `JList`: a component that displays a list of items from which the user can select an item. The selection in a `JList`.
 The constructor for `JList` takes an array of objects that will be displayed in the list.
-The `getSelectedItem()` method returns the currently selected object's value.
+The `getSelectedValue()` method returns the currently selected object's value.
 
 ```java
 private JPanel createListPanel(String panelName) {

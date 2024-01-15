@@ -124,6 +124,7 @@ Creates a `JLabel` in the center of the panel. The text "This is a label" appear
 private JPanel createLabelPanel(String panelName) {
     JPanel panel = new JPanel();
     JLabel label = new JLabel(panelName);
+    label.setText("This is a label");
     panel.add(label);
     return panel;
 }
